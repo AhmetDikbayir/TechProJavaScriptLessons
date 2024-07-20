@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>var-let-const</title>
+</head>
+<body>
+    <h2>var-let-const</h2>
+    <script>
+        var x;
+        console.log(x); // undefined
+
+        var x = 10;
+        console.log("x = " +x); // 10
+
+        var x =20;
+        var x = 30; // tekrar tanımlamalar yapaılabilir.
+        console.log("x = " + x); // 30
+
+        let z = 20;
+        //let z = 30; // let tekrar tanımlamaya izin vermez
+        console.log("z = " +z); // 30
+
+        //const k; // hata verir baştan sabitin değeri verilmelidir.
+        const y = 20;
+        //const y = 30; // const tekrar tanımlamaya izin vermez
+        //y = 14; // hata verir
+        console.log("y = " +y); // 20
+
+        //Scope
+        {
+            var m = 50;
+            let n = 70;
+            const o = 90;
+        }
+
+        console.log(m);
+        //console.log(n); // blok dışı olduğu için hata verir.
+        //console.log(o); // blok dışı olduğu için hata verir.
+    </script>
+</body>
+</html>
