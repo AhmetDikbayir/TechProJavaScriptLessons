@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Types</title>
+</head>
+<body>
+    <h2>Data Types</h2>
+    <script>
+        var x = 10;
+        console.log(x);
+        console.log(typeof(x));
+        var y = "10";
+        var a = "Hello";
+        console.log(y);
+        console.log(typeof(y));
+
+        console.log(a);
+        console.log(typeof(a));
+        var z = "10.5";
+        console.log(z);
+        console.log(typeof(z));
+
+        var max = Number.MAX_SAFE_INTEGER;
+        console.log(max);
+
+        var min = Number.MIN_SAFE_INTEGER;
+        console.log(min);
+
+        var k = 65n;
+        console.log(k);
+        console.log(typeof(k));
+        console.log(k + 1n); // bigint ile bigint toplanır. Normal sayı toplanamaz.
+
+        //JavaScript datatype tanımlamada dinamiktir.
+        //Bir variable'a sonradan bir değer ataması yapıldığında datatype kendisi dönüştürür.
+        let n = 7;
+        console.log(n)
+        n = "Merhaba";
+        console.log(n)
+        console.log(typeof n);
+
+        var p = 3;
+        var p = "Yeni deger";
+        console.log(p);
+
+        var c = null;
+    </script>
+</body>
+</html>
