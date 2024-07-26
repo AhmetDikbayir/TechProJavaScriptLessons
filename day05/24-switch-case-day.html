@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Case</title>
+</head>
+<body>
+    <h2>Gün Uygulaması</h2>
+    <input type="text">
+    <button onclick="showDay()">Günü Bul</button>
+    <p></p>
+    <script>
+        function showDay(){
+            let day = document.querySelector("input").value;
+            let message;
+            let p = document.querySelector("p");
+            switch(day){
+                case "1":
+                    message = "Pazartesi";
+                    break;
+                case "2":
+                    message = "Salı";
+                    break;
+                case "3":
+                    message = "Çarşamba";
+                    break;
+                case "4":
+                    message = "Perşembe";
+                    break;
+                case "5":
+                    message = "Cuma";
+                    break;
+                case "6":
+                    message = "Cumartesi";
+                    break;
+                case "7":
+                    message = "Pazar";
+                    break;
+                default:
+                    message = "Lütfen geçerl, bir gün sayısı giriniz.";
+            }
+
+            p.innerHTML = message;
+        }
+
+    </script>
+</body>
+</html>
