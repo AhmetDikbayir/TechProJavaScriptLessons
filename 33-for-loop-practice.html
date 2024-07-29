@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Loop Practice</title>
+</head>
+<body>
+    <h2>Discount Application</h2>
+
+    <input type="text" placeholder="Enter discount amount">
+    <button onclick="applyDiscount()">Apply Discount</button>
+    <ul id="productList">
+        <li>Notebook <span>1500</span>$</li>
+        <li>Klavye <span>100</span>$</li>
+        <li>Tablet <span>500</span>$</li>
+        <li>Mouse <span>20</span>$</li>
+        <li>Memory Card <span>50</span>$</li>
+        <li>HeadPhone <span>500</span>$</li>
+        <li>Monitör <span>1000</span>$</li>
+        <li>Desktop <span>2500</span>$</li>
+    </ul>
+
+    <script>
+        function applyDiscount() {
+            let discountAmount = document.querySelector('input').value;
+            let priceList = document.querySelectorAll('#productList > li > span');
+            for(var i = 0; i<priceList.length; i++){
+                let price = priceList[i].innerHTML;
+                let newPrice = price*(100- discountAmount)/100;
+                priceList[i].innerHTML = newPrice;
+            }
+            
+        }
+
+
+    </script>
+</body>
+</html>
