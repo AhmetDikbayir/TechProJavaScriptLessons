@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial Calculation</title>
+</head>
+<body>
+    <h2>Calculate Factorial</h2>
+    <input type="text" >
+    <button onclick="calculateFactorial()">Calculate</button>
+    <div class="result"></div>
+
+    <script>
+        function calculateFactorial(){
+            
+            let num = document.querySelector('input').value;
+            let result = document.querySelector('.result');
+            let factorial = 1;
+
+            console.log(num);
+            if(num == 0){
+                factorial= 1;
+            }else{
+                while(num>0){
+                    factorial *= num;
+                    console.log(factorial);
+                    num --;
+                }
+            }
+            
+            result.innerHTML = factorial;
+        }
+
+    </script>
+</body>
+</html>
