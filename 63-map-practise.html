@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map Practice</title>
+</head>
+
+<body>
+    <h2>Map Practice</h2>
+
+    <script>
+
+        let names = ["ali", "veli", "ayşe"];
+
+        let cities = ["istanbul", "izmir", "ankara"];
+
+        function toUpperCaseNames(names) {
+            let newNames = names.map((name) => {
+                return name.toUpperCase();
+            });
+            console.log(newNames);
+        }
+        toUpperCaseNames(cities);
+        toUpperCaseNames(names);
+
+        ////////////////////////////////////
+        //tl fiyatı euro ve dolara çeviren fonksiyonu
+        const euro = 36.5;
+        const dolar = 33.2;
+        const tlPrices = [1000, 1500, 1000, 500, 800];
+
+        //map method with function
+        function convertToEuro(tlPrice) {
+            return (tlPrice / euro).toFixed(2);
+        }
+
+        function convertToDollar(tlPrice) {
+            return (tlPrice / dolar).toFixed(2);
+        }
+
+        //map method without function 
+        let dollarPrices = tlPrices.map((price) => (price / dolar).toFixed(2));
+        let euroPrices = tlPrices.map((price) => (price / euro).toFixed(2));
+
+        let functionEuroPrices = tlPrices.map(convertToEuro);
+        let functionDollarPrices = tlPrices.map(convertToDollar);
+
+        console.log("Euro prices with function : " + functionEuroPrices);
+        console.log("Dollar prices with function : " + dollarPrices);
+        console.log(euroPrices);
+
+    </script>
+</body>
+
+</html>
