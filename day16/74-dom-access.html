@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Access</title>
+</head>
+
+<body>
+    <h2>DOM Access</h2>
+    <main>
+
+        <section>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, architecto mollitia itaque sapiente
+            repellendus dolores tempora a quaerat commodi autem ullam ab unde est reiciendis dolorum ea ad? Cumque,
+            placeat.</p>
+        </section>
+
+        <h3>Accesing Elements</h3>
+        <div>
+            <ul class="list" id="list">
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Blog</a>></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </div>
+
+    </main>
+
+    <script>
+        let list = document.getElementById("list");
+
+        //closest
+        console.log(list.closest("section").innerHTML);
+
+        //children
+        console.log(list);
+        console.log(list.children[1].innerText);
+        console.log(list.firstElementChild.innerText);
+        console.log(list.lastElementChild.innerText);
+    </script>
+</body>
+
+</html>
