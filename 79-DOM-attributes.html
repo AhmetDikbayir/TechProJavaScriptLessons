@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Attributes</title>
+</head>
+<body>
+    <h2>DOM Attributes</h2>
+
+    <input type="number" name="" id="identity">
+    <button disabled id="submit">Submit</button>
+    <p id="message"></p>
+
+    <script>
+
+        document.getElementById("identity").oninput = ()=>{
+            let identityNo = event.target.value;
+            console.log(identityNo);
+
+            if(identityNo.length == 11){
+                document.getElementById("submit").removeAttribute("disabled");
+                message.innerText = "";
+            }
+            else {
+                document.getElementById("submit").setAttribute("disabled", "");
+                message.innerText = "11 hane olmalıdır.";
+            }
+        }
+
+        // Her değer girildiğinde function tetklenip input değerini alır.
+        // Değer uzunluğu 11 ise removeAttribute ile disabled kaldırılınca button aktif hale gelir.
+        // Değer uzunluğu 11 değil ise setAttribute ile disabled attribute'unü buttona ekler.
+    </script>
+</body>
+</html>

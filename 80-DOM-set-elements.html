@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Elements</title>
+</head>
+<body>
+    <h2>DOM Elements</h2>
+
+    <input type="text" id="name">
+    <button id="btn">Ekle</button>
+
+    <ul type="none" id="list"></ul>
+
+    <script>
+        // İnputa girilen isim listeye eklensin.
+
+        btn.onclick = ()=>{
+
+            let name = document.getElementById("name");
+            let list = document.getElementById("list");
+
+            let newLi = document.createElement("li");
+            newLi.innerHTML = name.value;
+            newLi.style.color = "brown";
+            console.log(newLi);
+
+            list.appendChild(newLi);
+
+            name.value = "";
+            name.focus();
+        }
+
+
+    </script>
+
+</body>
+</html>
