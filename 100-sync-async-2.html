@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sync - Async</title>
+</head>
+<body>
+    <h2>Sync - Async</h2>
+
+    <script>
+
+
+        const sum = (a, b)=>{
+            return a + b;
+        }
+
+        const getCoordinates = (a, b)=>{
+            // Koordinatlar external bir sistemden API aracılığıyla geliyor varsayalım.
+            setTimeout(()=>{
+                return a + b;
+            }, 0);
+        }
+
+        console.log(sum(15, 25)); // 40
+
+        console.log(getCoordinates(35, 45)); // undefined
+
+        // getCoordinates sync bir fonksiyondur. Dolayısıyla içindeki async olan setTimeout fonksiyonu işlem sırasında arkaya atılır. getCoordinates function işleme girerken return değerini bulamaz ve undefined döndürür. Sonra setTimeout işlemimne sıra gelir ve döndürdüğü değeri alacak olan fonksiyon çoktan işlendiği için değerini getCoordinates fonksiyonuna veremez. 
+
+    </script>
+</body>
+</html>

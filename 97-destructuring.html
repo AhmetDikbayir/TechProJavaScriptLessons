@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring</title>
+</head>
+<body>
+    <h2>Destructuring</h2>
+
+    <script>
+
+        let person = {
+            firstName: "Ayşe",
+            lastName: "Çelik",
+            city: "Ankara",
+            department: "IT"
+        }
+
+        let fName = person.firstName;
+        let lName = person.lastName;
+        let personCity = person.city;
+        let personDepartment = person.department;
+
+        console.log(`${fName} ${lName} ${personCity}'da ${personDepartment} alanında çalışıyor.`);
+
+
+        let {lastName, firstName, city, department} = person;
+
+        console.log(`${firstName} ${lastName} ${city}'da ${department} alanında çalışıyor.`);
+
+    </script>
+</body>
+</html>

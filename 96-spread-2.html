@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread</title>
+</head>
+<body>
+    <h2>Spread</h2>
+
+    <script>
+
+        let person1 = {
+            firstName: "Ayşe",
+            lastName: "Çelik",
+            city: "Ankara",
+            department: "IT"
+        }
+
+        let person2 = person1;
+
+        person2.firstName = "Ali";
+
+        console.log(person1.firstName); // Ali
+
+        let person3 = {...person1} // Shallow Copy
+        person3.firstName = "Can";
+
+        console.log(person1.firstName); // Ali
+        console.log(person3); // {firstName: 'Can', lastName: 'Çelik', city: 'Ankara', department: 'IT'}
+
+        let person4 = {...person3, city: "İstanbul", age: 35}
+
+        console.log(person4); // {firstName: 'Can', lastName: 'Çelik', city: 'İstanbul', department: 'IT', age: 35}
+
+
+    </script>
+</body>
+</html>
