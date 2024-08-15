@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CallBack</title>
+</head>
+<body>
+
+    <h2>CallBack</h2>
+
+    <script>
+
+        let giveOrder = (order, callback)=>{
+            console.log("Siparişi verdik.");
+            callback(order);
+        }
+        console.log("AVM ye gittik.");
+        console.log("Bowling oynadık.");
+        console.log("Karnımız acıktı.");
+        giveOrder("Lahmacun", (order)=>{
+
+            console.log("Ayakkabı bakmaya gittik.");
+            console.log("Sipariş hazırlanıyor.");
+            console.log(order +" yedik.");
+            
+        });
+        /*
+        console.log("Sipariş hazırlanıyor.");
+        console.log("Siparişi yedik.");
+        console.log("Ayakkabı bakmaya gittik.");
+        */
+    </script>
+    
+</body>
+</html>
