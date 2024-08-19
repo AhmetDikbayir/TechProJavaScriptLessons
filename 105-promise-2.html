@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+</head>
+<body>
+    <h2>Promise</h2>
+
+    <button id="btn">Click</button>
+
+    <script>
+
+        // Javascript te bulunan confirm method unu async hale getiriniz.
+
+        const confirmsAync = (msg)=>{
+            
+            return new Promise((resolve)=>{
+                setTimeout(()=>{
+                    let result = confirm(msg);
+                    resolve(result);
+                }, 0);
+            });
+
+            
+        }
+
+        btn.onclick = ()=>{
+            confirmsAync("Silmek istediğinizden emin misisniz?")
+            .then((data)=>{
+                if(data){
+                    console.log("Kayıt silindi.");
+                }
+                else{
+                    console.log("Kayıt silmekten vazgeçildi.");
+                }
+            });
+        }
+    </script>
+</body>
+</html>

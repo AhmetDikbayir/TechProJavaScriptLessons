@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise Chains</title>
+</head>
+<body>
+    <h2>Promise Chains</h2>
+
+    <script>
+
+        const order = ()=>{
+            return new Promise((resolve)=>{
+                console.log("Sipariş verildi.");
+                setTimeout(()=>{
+                    console.log("Sipariş hazır.");
+                    resolve();              
+                }, 3000);
+            });
+        }
+
+
+        const eatDinner = ()=>{
+            return new Promise((resolve)=>{
+                console.log("Yemeğe başladık.");
+                setTimeout(()=>{
+                    console.log("Yemek bitti.");
+                    resolve();
+                }, 2000);
+            });
+        }
+
+
+        const watchMovie = ()=>{
+            console.log("Film başladı.");
+            setTimeout(()=>{
+                console.log("Film bitti.");
+            }, 1500);
+        }
+
+
+        const eatPopcorn = ()=>{
+            console.log("Patlamış mısır yemeğe başlandı.");
+            setTimeout(()=>{
+                console.log("Patlamış mısır bitti.");
+            }, 1000);
+        }
+
+        /*
+        order();
+        eatDinner();
+        watchMovie();
+        eatPopcorn();
+        */
+        
+
+        // Fonksiyonları belli bir sıraya göre çalışmaya zorlamak için promise chain kullnılır.
+
+        order().then(()=>{
+            eatDinner().then(()=>{
+                watchMovie();
+                eatPopcorn();
+            });
+        });
+
+    </script>
+</body>
+</html>
