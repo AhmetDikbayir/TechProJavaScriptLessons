@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deneme</title>
+    <style>
+        .effect{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h2>Deneme</h2>
+    <button id="btn-start">Start</button> 
+    <button id="btn-stop">Stop</button>
+    <h3>Merhaba</h3>
+
+<script>
+    const btnStart = document.querySelector('#btn-start');
+    const btnStop = document.querySelector('#btn-stop');
+    const h3 = document.querySelector('h3');
+
+    let x;
+
+    btnStart.addEventListener('click', () => {
+        if(x) return;
+
+        x = setInterval(() => {
+            h3.classList.toggle('effect');
+        }, 500);
+
+    btnStop.addEventListener('click', () => {
+            clearInterval(x);
+            x = 0;
+        });
+    });
+</script>
+</body>
+</html>
