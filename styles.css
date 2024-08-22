@@ -1,0 +1,23 @@
+h1 {
+  color: red;
+  align-items: center;
+  margin-top: 80px;
+  font-style: italic;
+  font-size: 3rem;
+}
+
+nav {
+  background-color: coral;
+  padding: 15px;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5rem;
+}
+nav a {
+  text-decoration: none;
+  color: white;
+  margin: 0;
+}/*# sourceMappingURL=styles.css.map */
